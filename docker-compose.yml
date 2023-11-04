@@ -1,13 +1,13 @@
-version: "3.8"
+version: "3.0"
 
 services:
   nodejs:
-    container_name: wiseboq_puppeteer
+    container_name: wiseboq-puppeteer
     build:
       dockerfile: Dockerfile
-      context: ./
     ports:
-      - "${PORT}:${PORT}"
+      - "4004:4004"
+    platform: linux/x86_64
     networks:
       - puppeteer-network
 
